@@ -1,0 +1,64 @@
+package Assignment;
+
+import java.util.Arrays;
+import java.util.List;
+
+// https://leetcode.com/problems/count-items-matching-a-rule/submissions/1713236581/
+
+public class Q12_CountItems_Leet1773 {
+    public static void main(String[] args) {
+        List<List<String>> items = Arrays.asList(
+                Arrays.asList("phone", "blue", "pixel"),
+                Arrays.asList("computer", "silver", "lenovo"),
+                Arrays.asList("phone", "red", "iphone"));
+
+        String ruleKey = "color", ruleValue = "silver";
+        System.out.println(countMatches(items, ruleKey, ruleValue));
+    }
+
+    private static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int count = 0;
+        int index;
+        switch (ruleKey) {
+            case "type":
+                index = 0;
+                break;
+
+            case "color":
+                index = 1;
+                break;
+
+            case "name":
+                index = 2;
+                break;
+            default:
+                return 0;
+        }
+        for (List<String> item : items) {
+
+            if (item.get(index).equals(ruleValue)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+
+// if (ruleKey == "type") {
+// i = 0;
+// if (list.get(i) == ruleValue) {
+// count++;
+// }
+// } else if (ruleKey == "color") {
+// i = 1;
+// if (list.get(i) == ruleValue) {
+// count++;
+// }
+
+// } else if (ruleKey == "name") {
+// i = 2;
+// if (list.get(i) == ruleValue) {
+// count++;
+// }
+// }
