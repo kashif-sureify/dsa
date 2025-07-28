@@ -12,7 +12,7 @@ public class Q1_BuildFromPermutation_Leet1920 {
     }
 
     private static int[] buildPermutation(int[] arr) {
-        int newArr[] = new int[arr.length - 1];
+        int newArr[] = new int[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
             newArr[i] = arr[arr[i]];
