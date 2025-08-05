@@ -1,1 +1,3 @@
 Assignment Questions: 10, 11, 20, 21, 24, 25
+Medium:
+3
