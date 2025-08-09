@@ -1,3 +1,5 @@
 Assignment Questions: 10, 11, 20, 21, 24, 25
 Medium:
-3
+3,7, 10
+
+Hard: 1, not made with array, May require deque( Here, in Hard Q1, not all case covered)
